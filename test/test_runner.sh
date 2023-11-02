@@ -45,6 +45,7 @@ for test_case in "${test_cases[@]}"; do
 
     make $cmd &>$outfile &
     pids+=($!) # Store the PID
+    sleep 1
 done
 
 echo "Waiting for all processes to finish..."
@@ -64,6 +65,7 @@ for test_case in "${test_cases[@]}"; do
         check_output "$target_string" "$outfile"
     fi
     rm "$outfile"
+    sleep 1
 done
 
 echo "All tests passed!"

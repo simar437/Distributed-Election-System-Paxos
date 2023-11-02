@@ -48,5 +48,4 @@ TESTS := $(shell seq 1 10)
 test:
 	@for test in $(TESTS); do \
 		bash test/test$$test.sh; \
-		sleep 3; \
 	done
