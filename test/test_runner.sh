@@ -43,7 +43,7 @@ for test_case in "${test_cases[@]}"; do
     outfile="${parts[1]}"
     touch "$outfile"
 
-    make $cmd &>$outfile &
+    make $cmd &>$outfile 2>&1 &
     pids+=($!) # Store the PID
     sleep 1
 done
