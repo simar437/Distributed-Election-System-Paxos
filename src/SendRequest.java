@@ -52,7 +52,9 @@ public class SendRequest {
         for (String s : header) {
             try {
                 String[] h = s.split(": ");
-                headers.put(h[0], h[1]);
+                if (h.length >= 2) {
+                    headers.put(h[0], h[1]);
+                }
             } catch (Exception e) {
                 System.out.println("String: " + str);
                 System.out.println("S: " + s);

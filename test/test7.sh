@@ -34,5 +34,6 @@ if [[ $m2 == *"Sending Already Accepted Value to M2 with accepted value M1"* ]];
     echo "Test 7 passed"
 else
     echo "Test 7 failed"
+    cat script_log.txt
 fi
 rm script_log.txt
