@@ -11,7 +11,7 @@ declare -a test_cases=(
     "M8:output_m8.txt"
     "M9:output_m9.txt"
     "M1:output_m1.txt"
-    "M2 DELAY=5000:output_m2.txt"
+    "M2 DELAY=10000:output_m2.txt"
 
 )
 

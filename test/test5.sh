@@ -3,16 +3,15 @@
 
 declare -a test_cases=(
     "server:output_server.txt"
-    "M1:output_m1.txt"
-    "M2:output_m2.txt"
-    "M3:output_m3.txt"
     "M4:output_m4.txt"
     "M5:output_m5.txt"
     "M6:output_m6.txt"
     "M7:output_m7.txt"
     "M8:output_m8.txt"
     "M9:output_m9.txt"
-
+    "M1:output_m1.txt"
+    "M2:output_m2.txt"
+    "M3:output_m3.txt"
 )
 
 TARGET_STRING="has been elected as the President."

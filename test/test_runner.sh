@@ -26,6 +26,7 @@ check_output() {
     else
         if ! grep -q "$target" "$file"; then
             echo "The output in $file did not contain the target string."
+            cat "$file"
             exit 1
         fi
     fi
@@ -44,7 +45,7 @@ for test_case in "${test_cases[@]}"; do
     outfile="${parts[1]}"
     touch "$outfile"
 
-    make "$cmd" > "$outfile" &
+    make $cmd &>$outfile &
     sleep 1
     pids+=($!) # Store the PID
 done
