@@ -41,6 +41,7 @@ for test_case in "${test_cases[@]}"; do
     IFS=":" read -ra parts <<<"$test_case"
     cmd="${parts[0]}"
     outfile="${parts[1]}"
+    touch "$outfile"
 
     make $cmd &>$outfile &
     pids+=($!) # Store the PID
@@ -62,9 +63,7 @@ for test_case in "${test_cases[@]}"; do
     if [ "$cmd" != "server" ]; then
         check_output "$target_string" "$outfile"
     fi
+    rm "$outfile"
 done
 
 echo "All tests passed!"
-
-# Clean up temporary files
-rm "${test_cases[@]#*:}" # This uses parameter expansion to extract all output file names

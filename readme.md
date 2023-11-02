@@ -56,13 +56,15 @@ The proposer class also implements everything that the Acceptor class does.
 ### SendRequest Class
 Internal class for sending and receiving messages from the communication server and the members.
 
+```Note: All members must be terminated manually using Ctrl+C (NOT IN TEST)``` 
+
 ## Testing
 ### Test 1
 One proposer, four acceptors
 ### Test 2
 Three acceptors, two proposers, M1 and M3 having a delay of 5000ms
 ### Test 3
-All proposers and acceptors, M1 running with a delay of 1000ms
+Two proposers and all acceptors, M2 running with a delay of 5000ms
 ### Test 4
 One proposer, one acceptor
 ### Test 5
