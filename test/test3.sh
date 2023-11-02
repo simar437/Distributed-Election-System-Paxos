@@ -4,7 +4,6 @@
 
 declare -a test_cases=(
     "server:output_server.txt"
-
     "M4:output_m4.txt"
     "M5:output_m5.txt"
     "M6:output_m6.txt"
@@ -18,4 +17,4 @@ declare -a test_cases=(
 
 TARGET_STRING="M1 has been elected as the President."
 
-bash test/test_runner.sh -s 20 "$TARGET_STRING" "${test_cases[@]}"
+bash test/test_runner.sh -s 30 "$TARGET_STRING" "${test_cases[@]}"

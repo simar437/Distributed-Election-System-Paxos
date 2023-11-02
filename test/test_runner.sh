@@ -36,6 +36,7 @@ shift
 test_cases=("$@")
 
 pids=() # Store process IDs
+echo "Waiting for all processes to finish..."
 
 for test_case in "${test_cases[@]}"; do
     IFS=":" read -ra parts <<<"$test_case"
@@ -43,12 +44,11 @@ for test_case in "${test_cases[@]}"; do
     outfile="${parts[1]}"
     touch "$outfile"
 
-    make $cmd &>$outfile 2>&1 &
-    pids+=($!) # Store the PID
+    make "$cmd" > "$outfile" &
     sleep 1
+    pids+=($!) # Store the PID
 done
 
-echo "Waiting for all processes to finish..."
 sleep "$SLEEP_TIME"
 
 # Kill all started processes

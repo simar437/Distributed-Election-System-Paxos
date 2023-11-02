@@ -67,7 +67,7 @@ Internal class for sending and receiving messages from the communication server 
 ### Test 1
 One proposer, four acceptors
 ### Test 2
-Three acceptors, two proposers, M1 and M3 having a delay of 5000ms
+Three acceptors, two proposers, M1 and M3 having a delay of 10s
 ### Test 3
 Two proposers and all acceptors, M2 running with a delay of 5000ms
 ### Test 4
