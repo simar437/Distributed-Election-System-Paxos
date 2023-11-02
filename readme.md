@@ -5,6 +5,11 @@ To build the project, run the following command:
 ```
 make
 ```
+Run the communication server using:
+```
+make server
+```
+The communication server will be running on port 4567.
 Run any member using:
 ```
 make M<NUMBER>
