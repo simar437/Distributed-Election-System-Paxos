@@ -69,4 +69,4 @@ for test_case in "${test_cases[@]}"; do
     rm "$outfile"
 done
 
-echo "All tests passed!"
+echo "Test Passed!"
