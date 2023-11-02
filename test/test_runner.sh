@@ -52,7 +52,9 @@ echo "Waiting for all processes to finish..."
 sleep "$SLEEP_TIME"
 
 # Kill all started processes
-kill -15 "${pids[@]}"
+kill -15 "${pids[@]}" >/dev/null 2>&1
+
+sleep 1
 
 # Check outputs for the target string
 for test_case in "${test_cases[@]}"; do
@@ -65,7 +67,6 @@ for test_case in "${test_cases[@]}"; do
         check_output "$target_string" "$outfile"
     fi
     rm "$outfile"
-    sleep 1
 done
 
 echo "All tests passed!"

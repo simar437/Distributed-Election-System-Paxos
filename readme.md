@@ -73,11 +73,11 @@ Two proposers and all acceptors, M2 running with a delay of 5000ms
 ### Test 4
 One proposer, one acceptor
 ### Test 5
-All proposers and acceptors, No delay (may take longer to run), Anyone could win
+All proposers and acceptors, No delay (will take longer to run), Anyone could win
 ### Test 6
-All acceptors running, M1 running and killed before accept phase. M2 started afterwords.
+All acceptors running, M1 running and killed before accept phase. M2 started afterward.
 ### Test 7
-All acceptors running, M1 running and killed after accept phase. M2 started afterwords. M1 should win.
+All acceptors running, M1 running and killed after accept phase. M2 started afterward. M1 should win.
 ### Test 8
 All proposers and acceptors, M1 with a delay of 3000ms, M2 with a delay of 2000ms, M3 with a delay of 1000ms.
 ### Test 9
