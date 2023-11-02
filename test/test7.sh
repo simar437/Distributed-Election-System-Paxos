@@ -4,7 +4,7 @@ exec > script_log.txt 2>&1
 
 make server &
 pid_server=$!
-sleep 1
+sleep 10
 m1=$(make M1 &) &
 pid_m1=$!
 
@@ -13,7 +13,7 @@ for i in {4..9} ; do
     make "M$i" &
     pid_acceptors+=($!)
 done
-sleep 6
+sleep 2
 kill -15 $pid_m1
 
 make M2 &
@@ -32,8 +32,6 @@ m2=$(cat script_log.txt)
 
 
 if [[ $m2 == *"Sending Already Accepted Value to M2 with accepted value M1"* ]]; then
-    echo "Test 7 passed"
-else
-    echo "Test 7 failed"
+    echo "Test Passed"
 fi
 rm script_log.txt

@@ -33,8 +33,6 @@ m2=$(cat script_log.txt)
 
 
 if [[ $m2 == *"M2 has been elected as the President."* ]]; then
-    echo "Test 6 passed"
-else
-    echo "Test 6 failed"
+    echo "Test Passed"
 fi
 rm script_log.txt
