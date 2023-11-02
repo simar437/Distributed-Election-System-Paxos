@@ -85,4 +85,4 @@ Only proposers running.
 ### Test 10
 Only acceptors running.
 
-Note: Using test_runner.sh is runnning all the tests.
+Note: Using test_runner.sh is runnning all the tests, and make terminated lines may appear while testing as it being killed in test cases.

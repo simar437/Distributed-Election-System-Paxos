@@ -4,6 +4,7 @@ exec > script_log.txt 2>&1
 
 make server &
 pid_server=$!
+sleep 1
 m1=$(make M1 &) &
 pid_m1=$!
 
