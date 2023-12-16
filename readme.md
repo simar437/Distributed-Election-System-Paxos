@@ -1,5 +1,6 @@
-# Election System using Paxos Algorithm
-
+# Distributed Election System using Paxos Algorithm
+## Description
+This project implements a robust and fault-tolerant distributed election system utilizing the Paxos algorithm, a renowned consensus algorithm used in distributed systems to achieve agreement among a group of nodes. The system is designed to ensure the selection of a single leader or coordinator among a set of participants, making it particularly useful for scenarios like distributed databases, cluster management, and fault-tolerant computing environments.
 ## Build and Run
 To build the project, run the following command:
 ```
@@ -14,7 +15,7 @@ Run any member using:
 ```
 make M<NUMBER>
 ```
-for acceptors, additional argument can be given:
+for acceptors, additional arguments can be given:
 ```
 make M<NUMBER> DELAY=<DELAY>
 ```
@@ -24,7 +25,7 @@ Additionally, to manually run the Proposers, run the following command:
 ```
 make proposer NAME=<M1> UNIQUE_ID=<UNIQUE_ID>
 ```
-where `<M1>` is the name of the proposer and provide a unique increasing id for each proposer.
+where `<M1>` is the name of the proposer and provides a unique increasing id for each proposer.
 
 To run the Acceptor, manually, run the following command:
 ```
